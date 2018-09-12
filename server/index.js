@@ -1,6 +1,6 @@
-var express = require('express');
-var cors = require('cors');
-var bodyParser = require('body-parser');
+var express = require("express");
+var cors = require("cors");
+var bodyParser = require("body-parser");
 
 var app = express();
 
@@ -13,11 +13,11 @@ app.use(cors());
 
 routes(app);
 
-app.set('port', 8081);
+app.set("port", 8081);
 
-var server = app.listen(app.get('port'), function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("app listening at http://%s:%s", host, port)
+var server = app.listen(app.get("port"), function() {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log("app listening at http://%s:%s", host, port);
 });
