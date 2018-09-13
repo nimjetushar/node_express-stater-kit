@@ -21,11 +21,9 @@ module.exports = function(app) {
   });
 
   app.get("/user/:id", (req, res) => {
-    // const data = userModel.fetchUser(userId);
-    //     if (data && !data.length) {
-    //       res.sendStatus(204);
-    //     }
-    //     res.json(data);
+    const userId = req.params.id;
+    const data = userModel.fetchUser(userId);
+    res.json(data);
   });
 
   app.post("/user", ({ body }, res) => {
